@@ -1,0 +1,64 @@
+<!--pages/index/index.wxml-->
+<view class="indexContainer">
+  <!-- 轮播图区域 -->
+  <swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33">
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 图标导航栏区域 -->
+  <view class="navContainer">
+    <view class="navItem">
+      <text class="iconfont icon-biaoqiankuozhan_tuijian-121"></text>
+      <text>每日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-gedan"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paixingbang"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibo"></text>
+      <text>直播</text>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <view class="header">
+      <text class="title">推荐歌曲</text>
+      <view>
+        <text>为你精心推荐</text>
+        <text class="more">查看更多</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐歌曲内容区 -->
+  <scroll-view class="recommendScroll" enable-flex scroll-x>
+    <view class="scrollItem">
+      <image src="/static/images/nanshen.jpg"></image>
+      <text>男神男神男神,好帅好帅好帅你你你你你</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nanshen.jpg"></image>
+      <text>男神男神男神</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nanshen.jpg"></image>
+      <text>男神男神男神</text>
+    </view>
+    <view class="scrollItem">
+      <image src="/static/images/nanshen.jpg"></image>
+      <text>男神男神男神</text>
+    </view>
+  </scroll-view>
+</view>
